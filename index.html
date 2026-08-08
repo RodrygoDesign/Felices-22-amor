@@ -1,249 +1,296 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BrianTattoo, tatuador en Elche especializado en realismo black and gray, blackwork, sombras y piezas personalizadas con higiene, precision y detalle.">
-  <meta name="theme-color" content="#080806">
-  <meta property="og:title" content="BrianTattoo | Black and Gray Realism">
-  <meta property="og:description" content="Tatuajes personalizados en Elche con enfoque en realismo, blackwork, sombras, higiene y acabado profesional.">
-  <meta property="og:type" content="website">
-  <title>BrianTattoo | Black and Gray Realism en Elche</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header" data-header>
-    <a class="brand" href="#inicio" aria-label="Ir al inicio">
-      <span class="brand__mark">BT</span>
-      <span>
-        <strong>BrianTattoo</strong>
-        <small>Black and Gray Realism</small>
-      </span>
-    </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090708" />
+    <meta name="description" content="Un regalo de Rodri para Meli por su cumpleaños." />
+    <title>Feliz cumpleaños, Meli ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-      <span class="nav-toggle__line"></span>
-      <span class="nav-toggle__line"></span>
-      <span class="nav-toggle__line"></span>
-      <span class="sr-only">Abrir menu</span>
-    </button>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <canvas class="confetti-canvas" id="confetti" aria-hidden="true"></canvas>
 
-    <nav class="site-nav" id="site-nav" data-nav aria-label="Navegacion principal">
-      <div class="site-nav__links">
-        <a href="#galeria">Trabajo</a>
-        <a href="#sobre-mi">Sobre Brian</a>
-        <a href="#ubicacion">Elche</a>
-      </div>
-      <div class="site-nav__actions">
-        <a class="nav-cta" href="#reserva">Reservar</a>
-        <a class="nav-call" href="tel:+34643665793">Llamar</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="intro-hero" id="inicio" aria-labelledby="hero-title">
-      <div class="intro-hero__copy">
-        <p class="intro-hero__eyebrow">Tatuador en Elche</p>
-        <h1 class="intro-hero__title" id="hero-title" aria-label="Brian Tattoo">
-          <span><span>Brian</span></span>
-          <span><span>Tattoo</span></span>
-        </h1>
-        <p class="intro-hero__tagline">
-          <span>Realismo black and gray</span>
-          <span>Blackwork, sombra y piezas pensadas para la piel.</span>
-        </p>
-      </div>
-
-      <figure class="intro-hero__media intro-hero__media--portrait" aria-label="Imagen de BrianTattoo">
-        <img src="img/brian-sin-fondo.png" alt="BrianTattoo sujetando una maquina de tatuar" fetchpriority="high">
-      </figure>
-
-      <div class="intro-hero__footer section-inner">
-        <a class="button button--light" href="#reserva">
-          <span>Reservar cita</span>
-          <span class="button__icon" aria-hidden="true">↗</span>
-        </a>
-        <a class="button button--ghost" href="#trabajo">
-          <span>Ver galeria</span>
-          <span class="button__icon" aria-hidden="true">↓</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="scroll-gallery" id="trabajo" aria-labelledby="trabajo-title" data-scroll-gallery>
-      <div class="section-inner scroll-gallery__intro">
-        <p class="eyebrow">Portafolio</p>
-        <h2 id="trabajo-title">Portfolio en piel: sombra, linea y detalle.</h2>
-      </div>
-
-      <div class="scroll-gallery__stage">
-        <div class="scroll-gallery__sticky">
-          <div class="scroll-gallery__grid" data-scroll-grid aria-label="Galeria animada de tatuajes">
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1562379825-415aea84ebcf?auto=format&fit=crop&w=900&q=82" alt="Tatuaje floral negro en cuello" loading="lazy" decoding="async">
-              <figcaption>Flor negra</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=900&q=82" alt="Brazo con tatuaje oscuro de alto contraste" loading="lazy" decoding="async">
-              <figcaption>Contraste</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1758404255679-9afd847ede1c?auto=format&fit=crop&w=900&q=82" alt="Tatuaje geometrico con sombras durante el proceso" loading="lazy" decoding="async">
-              <figcaption>Geometria</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?auto=format&fit=crop&w=900&q=82" alt="Detalle de tatuador trabajando una pieza en brazo" loading="lazy" decoding="async">
-              <figcaption>Linea</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1761276297686-f507ca9fe8b6?auto=format&fit=crop&w=900&q=82" alt="Tatuador trabajando sobre el hombro de un cliente" loading="lazy" decoding="async">
-              <figcaption>Sesion</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1740239986116-6c04b956f9d3?auto=format&fit=crop&w=900&q=82" alt="Tatuaje de espalda en blanco y negro" loading="lazy" decoding="async">
-              <figcaption>Back piece</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=900&q=82" alt="Tatuaje en negro y gris con alto contraste" loading="lazy" decoding="async">
-              <figcaption>Sombra</figcaption>
-            </figure>
-            <figure class="scroll-gallery__item">
-              <img src="https://images.unsplash.com/photo-1679585651020-9ae0653c84ad?auto=format&fit=crop&w=900&q=82" alt="Detalle de maquina de tatuaje durante una sesion" loading="lazy" decoding="async">
-              <figcaption>Proceso</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="paper-section about" id="sobre-mi">
-      <div class="section-inner about__grid">
-        <div class="about__media reveal">
-          <img class="about__main" src="img/quien-es-brian1.png" alt="BrianTattoo en el estudio" loading="lazy" decoding="async">
-          <img class="about__side" src="img/quien-es-brian2.png" alt="BrianTattoo durante una sesion" loading="lazy" decoding="async">
-        </div>
-
-        <div class="about__copy reveal">
-          <p class="eyebrow eyebrow--dark">Quien es BrianTattoo</p>
-          <h2>Realismo, sombra y una pieza pensada para tu piel.</h2>
-          <p>Soy Brian, tatuador con 8 años de experiencia especializado en realismo, blackwork y sombras. He desarrollado piezas reconocidas por su nivel de detalle, contraste y durabilidad, consolidando un estilo propio que mezcla tecnica y creatividad.</p>
-          <p>Trabajo con clientes locales e internacionales para crear tatuajes personalizados con una historia clara. Mi enfoque es la precision, la higiene y la excelencia artistica en cada sesion.</p>
-          <a class="text-link" href="#trabajo">Descubre el portafolio completo</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark-section studio-gallery" id="galeria" aria-labelledby="galeria-title">
-      <div class="section-inner studio-gallery__inner">
-        <div class="studio-gallery__heading reveal">
-          <p class="eyebrow">Galeria</p>
-          <h2 id="galeria-title">Detalle, piel y proceso real.</h2>
-          <p>Una seleccion visual del estilo de BrianTattoo: contraste, linea, sombra y sesiones trabajadas con calma.</p>
-        </div>
-
-        <div class="studio-gallery__track" aria-label="Galeria de imagenes">
-          <figure class="studio-gallery__item reveal">
-            <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=900&q=82" alt="Tatuaje en negro y gris con alto contraste" loading="lazy" decoding="async">
-            <figcaption>Sombra y contraste</figcaption>
-          </figure>
-          <figure class="studio-gallery__item studio-gallery__item--tall reveal">
-            <img src="https://images.unsplash.com/photo-1562379825-415aea84ebcf?auto=format&fit=crop&w=900&q=82" alt="Tatuaje floral negro en cuello" loading="lazy" decoding="async">
-            <figcaption>Flor negra</figcaption>
-          </figure>
-          <figure class="studio-gallery__item reveal">
-            <img src="https://images.unsplash.com/photo-1758404255679-9afd847ede1c?auto=format&fit=crop&w=900&q=82" alt="Tatuaje geometrico con sombras durante el proceso" loading="lazy" decoding="async">
-            <figcaption>Geometria</figcaption>
-          </figure>
-          <figure class="studio-gallery__item studio-gallery__item--wide reveal">
-            <img src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?auto=format&fit=crop&w=1100&q=82" alt="Detalle de tatuador trabajando una pieza en brazo" loading="lazy" decoding="async">
-            <figcaption>Linea en sesion</figcaption>
-          </figure>
-          <figure class="studio-gallery__item reveal">
-            <img src="https://images.unsplash.com/photo-1479767574301-a01c78234a0c?auto=format&fit=crop&w=900&q=82" alt="Brazo con tatuaje oscuro de alto contraste" loading="lazy" decoding="async">
-            <figcaption>Blackwork</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="paper-section location" id="ubicacion" aria-labelledby="ubicacion-title">
-      <div class="section-inner location__grid">
-        <div class="location__copy reveal">
-          <p class="eyebrow eyebrow--dark">Where to find him</p>
-          <h2 id="ubicacion-title">BrianTattoo trabaja en Elche.</h2>
-          <p>Atencion con cita previa para estudiar cada idea con el tiempo que merece. Si vienes con referencias, zona del cuerpo y tamaño aproximado, la reserva avanza mucho mas rapido.</p>
-          <div class="location__details">
-            <div>
-              <strong>Ubicacion</strong>
-              <span>Elche, Alicante</span>
-            </div>
-            <div>
-              <strong>Reserva</strong>
-              <span>Valoracion previa de idea, zona y tamaño</span>
-            </div>
-          </div>
-        </div>
-
-        <a class="map-card reveal" href="https://www.google.com/maps/search/?api=1&query=Elche%2C%20Alicante" target="_blank" rel="noreferrer" aria-label="Abrir ubicacion de referencia en Google Maps">
-          <span class="map-card__pin"></span>
-          <span class="map-card__label">Elche</span>
-          <span class="map-card__line map-card__line--one"></span>
-          <span class="map-card__line map-card__line--two"></span>
-          <span class="map-card__line map-card__line--three"></span>
-          <span class="map-card__line map-card__line--four"></span>
-        </a>
-      </div>
-    </section>
-
-    <section class="booking" id="reserva" aria-labelledby="reserva-title">
-      <img class="booking__bg" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=1700&q=80" alt="" loading="lazy" decoding="async">
-      <div class="booking__shade"></div>
-      <div class="section-inner booking__inner">
-        <div class="section-heading section-heading--center reveal">
-          <p class="eyebrow">Reservas</p>
-          <h2 id="reserva-title">Reserva por WhatsApp</h2>
-          <p>Cuenta tu idea en pocas lineas y abre el chat directo con BrianTattoo.</p>
-        </div>
-
-        <form class="booking-form booking-form--compact reveal" data-booking-form novalidate>
-          <div class="form-grid">
-            <label>
-              <span>Nombre</span>
-              <input type="text" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
-            </label>
-          </div>
-          <label class="form-message">
-            <span>Idea / zona</span>
-            <textarea name="idea" rows="4" placeholder="Ej: realismo en antebrazo, 12 cm, con referencias..." required></textarea>
-          </label>
-          <button class="button button--light booking-form__button" type="submit">
-            <span>Abrir WhatsApp</span>
-            <span class="button__icon" aria-hidden="true">↗</span>
-          </button>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="section-inner site-footer__inner">
-      <p>BrianTattoo © <span data-year></span>. Todos los derechos reservados.</p>
-      <p>Imagenes de referencia: Unsplash.</p>
+    <div class="intro" id="intro" aria-hidden="true">
+      <span>M</span>
+      <p>Para ti</p>
     </div>
-  </footer>
 
-  <div class="lightbox" data-lightbox hidden>
-    <button class="lightbox__close" type="button" aria-label="Cerrar imagen" data-lightbox-close>×</button>
-    <img src="" alt="" data-lightbox-img>
-    <p data-lightbox-title></p>
-  </div>
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio">
+        <span class="brand__initial">M</span>
+        <span class="brand__names">Meli <i>+</i> Rodri</span>
+      </a>
+      <span class="site-header__date">Feliz cumpleaños</span>
+    </header>
 
-  <script src="script.js"></script>
-</body>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero__media" aria-hidden="true">
+          <img src="img hero background.JPG" alt="" />
+        </div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow"><span>Meli + Rodri</span> Una historia real</p>
+          <h1 data-text-reveal="letters">
+            <span class="hero__title-main">Feliz cumpleaños</span><br /><em>Meli</em>
+          </h1>
+          <p class="hero__message" data-text-reveal="words">
+            Entre todos nuestros momentos, siempre hay uno que me apetece volver a ver:
+            el que estoy viviendo contigo.
+          </p>
+
+          <button class="play-button" id="openVideo" type="button">
+            <span class="play-button__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+            <span>Ver nuestra historia</span>
+          </button>
+        </div>
+
+        <div class="hero__caption" aria-hidden="true">
+          <span>Nuestra historia</span>
+          <i></i>
+          <p>M <b>♥</b> R</p>
+        </div>
+        <div class="hero__fade" aria-hidden="true"></div>
+      </section>
+
+      <section class="notes" id="notas" aria-labelledby="notesTitle">
+        <div class="notes__heading reveal">
+          <p>Tres recuerdos, un mismo lugar</p>
+          <h2 id="notesTitle" data-text-reveal="words">Pequeñas notas para ti</h2>
+          <span>Arrástralas para moverlas y descubrir cada una.</span>
+        </div>
+
+        <div class="notes__stage" id="notesStage">
+          <span class="notes__heart notes__heart--one" aria-hidden="true">♥</span>
+          <span class="notes__heart notes__heart--two" aria-hidden="true">♥</span>
+          <span class="notes__scribble" aria-hidden="true">M + R</span>
+
+          <article
+            class="note-card note-card--one"
+            tabindex="0"
+            aria-label="Nota uno: Mi lugar favorito. Se puede arrastrar."
+            data-x="-315"
+            data-y="18"
+            data-mobile-x="-18"
+            data-mobile-y="-8"
+            data-rotate="-7"
+          >
+            <span class="note-card__tape" aria-hidden="true"></span>
+            <header class="note-card__header">
+              <span>01</span>
+              <p>Mi lugar favorito</p>
+              <i>♥</i>
+            </header>
+            <div class="note-card__photo">
+              <img src="note-img1.JPG" alt="Meli y Rodri compartiendo un recuerdo juntos" draggable="false" />
+            </div>
+            <div class="note-card__copy">
+              <p>No importa dónde estemos: contigo, cualquier plan termina siendo especial.</p>
+              <strong>Mi lugar favorito siempre será a tu lado.</strong>
+            </div>
+            <footer>Con amor, Rodri <span>♥</span></footer>
+          </article>
+
+          <article
+            class="note-card note-card--two"
+            tabindex="0"
+            aria-label="Nota dos: Tu forma de ser. Se puede arrastrar."
+            data-x="0"
+            data-y="-22"
+            data-mobile-x="12"
+            data-mobile-y="15"
+            data-rotate="2"
+          >
+            <span class="note-card__tape" aria-hidden="true"></span>
+            <header class="note-card__header">
+              <span>02</span>
+              <p>Tu forma de ser</p>
+              <i>✦</i>
+            </header>
+            <div class="note-card__photo">
+              <img src="note-img2.JPG" alt="Un selfie de Meli y Rodri" draggable="false" />
+            </div>
+            <div class="note-card__copy">
+              <p>Me enamoran tu risa, tu carácter y esa manera tan tuya de alegrarme los días.</p>
+              <strong>Te elegiría una y otra vez.</strong>
+            </div>
+            <footer>Una de mis fotos favoritas <span>♥</span></footer>
+          </article>
+
+          <article
+            class="note-card note-card--three"
+            tabindex="0"
+            aria-label="Nota tres: Todo lo que viene. Se puede arrastrar."
+            data-x="315"
+            data-y="20"
+            data-mobile-x="0"
+            data-mobile-y="38"
+            data-rotate="7"
+          >
+            <span class="note-card__tape" aria-hidden="true"></span>
+            <header class="note-card__header">
+              <span>03</span>
+              <p>Todo lo que viene</p>
+              <i>♥</i>
+            </header>
+            <div class="note-card__photo">
+              <img src="note-img3.jpg" alt="Meli y Rodri en la playa" draggable="false" />
+            </div>
+            <div class="note-card__copy">
+              <p>Quiero seguir guardando viajes, tonterías, fotos imperfectas y días sencillos contigo.</p>
+              <strong>Lo mejor de nosotros todavía está por llegar.</strong>
+            </div>
+            <footer>Por muchos recuerdos más <span>♥</span></footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="letter" id="carta" aria-labelledby="letterTitle">
+        <div class="letter__decoration">
+          <figure class="reel-card">
+            <video
+              id="relationshipReel"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              preload="metadata"
+              aria-label="Un reel de Meli y Rodri"
+            >
+              <source src="reel.MP4" type="video/mp4" />
+              Tu navegador no puede reproducir este vídeo.
+            </video>
+            <figcaption>
+              <span>Nuestro reel</span>
+              <i>♥</i>
+              <span>Meli + Rodri</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <article class="letter__paper reveal">
+          <p class="letter__label">Una nota del amor de tu vida</p>
+          <h2 id="letterTitle" data-text-reveal="words">Amor de mi Vida...</h2>
+
+          <p>
+            Hoy no quiero escribirte el típico mensaje de cumpleaños. Solo quiero
+            recordarte lo feliz que me hace compartir mi vida contigo y lo afortunado
+            que me siento de tenerte a mi lado.
+          </p>
+
+          <p>
+            Me encanta cómo eres, incluso en esos días en los que tú no consigues verlo.
+            Gracias por tu cariño, por aguantar mis tonterías, por hacerme reír y por
+            convertir tantos momentos normales en recuerdos que significan muchísimo
+            para mí.
+          </p>
+
+          <p>
+            Espero que este nuevo año te traiga todo lo bueno que mereces. Yo quiero
+            estar ahí para celebrarlo contigo, apoyarte cuando lo necesites y seguir
+            construyendo nuestra historia, sin prisa y a nuestra manera.
+          </p>
+
+          <p class="letter__ending" data-text-reveal="words">Te quiero muchísimo. Feliz cumpleaños, mi vida.</p>
+
+          <footer class="letter__footer">
+            <span>Siempre tuyo,</span>
+            <strong>Rodri</strong>
+            <i>♥</i>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Meli <i>+</i> Rodri</span>
+      <p>Nuestra historia favorita todavía se está escribiendo.</p>
+    </footer>
+
+    <div class="music-player" id="musicPlayer">
+      <audio id="backgroundMusic" autoplay loop preload="auto">
+        <source src="cancion.mp3" type="audio/mpeg" />
+        <source
+          src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/2a/9c/b82a9cb8-d924-a82d-d3a8-94620ae18a5e/mzaf_1632029121505329438.plus.aac.p.m4a"
+          type="audio/mp4"
+        />
+      </audio>
+
+      <button
+        class="music-player__toggle"
+        id="musicToggle"
+        type="button"
+        aria-label="Reproducir Todo de Ti"
+        aria-pressed="false"
+      >
+        <svg class="music-player__note" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 18V5l10-2v13M9 9l10-2M6.5 21C4.57 21 3 19.88 3 18.5S4.57 16 6.5 16 10 17.12 10 18.5 8.43 21 6.5 21Zm10-2c-1.93 0-3.5-1.12-3.5-2.5s1.57-2.5 3.5-2.5 3.5 1.12 3.5 2.5-1.57 2.5-3.5 2.5Z" />
+        </svg>
+        <span class="music-player__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <div class="music-player__content">
+        <div class="music-player__info">
+          <strong>Todo de Ti</strong>
+          <span>Rauw Alejandro</span>
+        </div>
+
+        <label class="music-player__volume" aria-label="Volumen de la música">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11 5 6 9H2v6h4l5 4V5Zm4.5 4.5a3.5 3.5 0 0 1 0 5m2.5-8a7 7 0 0 1 0 11" />
+          </svg>
+          <input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.15" />
+        </label>
+      </div>
+    </div>
+
+    <div
+      class="video-modal"
+      id="videoModal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="videoTitle"
+    >
+      <div class="video-modal__backdrop" data-close-video></div>
+      <div class="video-modal__dialog">
+        <div class="video-modal__topbar">
+          <div>
+            <p>Para Meli, con amor</p>
+            <h2 id="videoTitle">Nuestra historia</h2>
+          </div>
+          <button class="video-modal__close" type="button" data-close-video aria-label="Cerrar vídeo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+
+        <div class="video-shell" id="videoShell">
+          <video id="birthdayVideo" controls playsinline preload="metadata">
+            <source src="video.mp4" type="video/mp4" />
+            Tu navegador no puede reproducir este vídeo.
+          </video>
+          <div class="video-loader" aria-hidden="true"><span></span></div>
+          <div class="video-placeholder" id="videoPlaceholder" hidden>
+            <span>♥</span>
+            <h3>El vídeo está casi listo</h3>
+            <p>Coloca <strong>video.mp4</strong> en esta carpeta y aparecerá aquí.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
