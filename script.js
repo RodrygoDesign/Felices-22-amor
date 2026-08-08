@@ -6,7 +6,6 @@ const openButton = document.querySelector("#openVideo");
 const modal = document.querySelector("#videoModal");
 const video = document.querySelector("#birthdayVideo");
 const videoShell = document.querySelector("#videoShell");
-const placeholder = document.querySelector("#videoPlaceholder");
 const musicPlayer = document.querySelector("#musicPlayer");
 const music = document.querySelector("#backgroundMusic");
 const musicToggle = document.querySelector("#musicToggle");
@@ -380,20 +379,10 @@ soundSectionObserver.observe(notesSection);
 soundSectionObserver.observe(letterSection);
 
 function showVideoReady() {
-  videoShell.classList.remove("has-error");
   videoShell.classList.add("is-ready");
-  placeholder.hidden = true;
 }
 
-function showVideoError() {
-  videoShell.classList.remove("is-ready");
-  videoShell.classList.add("has-error");
-  placeholder.hidden = false;
-}
-
-video.addEventListener("loadeddata", showVideoReady);
-video.addEventListener("canplay", showVideoReady);
-video.addEventListener("error", showVideoError);
+video.addEventListener("load", showVideoReady);
 
 music.volume = Number(musicVolume.value);
 
@@ -502,13 +491,9 @@ function openVideo() {
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
-  videoShell.classList.remove("has-error", "is-ready");
-  placeholder.hidden = true;
-  video.load();
+  videoShell.classList.remove("is-ready");
+  video.src = video.dataset.src;
   modal.querySelector(".video-modal__close").focus();
-
-  const playPromise = video.play();
-  if (playPromise) playPromise.catch(() => {});
 }
 
 function closeVideo() {
@@ -516,7 +501,7 @@ function closeVideo() {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
-  video.pause();
+  video.removeAttribute("src");
   if (resumeMusicAfterVideo) {
     music.play().catch(showMusicError);
     resumeMusicAfterVideo = false;
@@ -537,7 +522,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeVideo();
 
   if (event.key === "Tab" && modal.classList.contains("is-open")) {
-    const focusable = [...modal.querySelectorAll("button, video")].filter((item) => !item.disabled);
+    const focusable = [...modal.querySelectorAll("button, iframe")].filter((item) => !item.disabled);
     if (!focusable.length) return;
     const first = focusable[0];
     const last = focusable[focusable.length - 1];

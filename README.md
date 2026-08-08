@@ -2,13 +2,9 @@
 
 La web funciona sin instalación ni dependencias. Abre `index.html` en el navegador.
 
-## Añadir el vídeo
+## Vídeo de nuestra historia
 
-1. Copia el vídeo dentro de esta carpeta.
-2. Llámalo exactamente `video.mp4` (en minúsculas).
-3. Recarga la página y cualquiera de los botones de reproducción abrirá el vídeo.
-
-Mientras el archivo no esté, la web muestra un mensaje de espera dentro del reproductor.
+El vídeo se reproduce desde YouTube y solo se carga cuando se abre el reproductor, evitando descargar un archivo de vídeo local junto con la página.
 
 ## Reel de la carta
 

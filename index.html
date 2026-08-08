@@ -279,16 +279,15 @@
         </div>
 
         <div class="video-shell" id="videoShell">
-          <video id="birthdayVideo" controls playsinline preload="metadata">
-            <source src="video.mp4" type="video/mp4" />
-            Tu navegador no puede reproducir este vídeo.
-          </video>
+          <iframe
+            id="birthdayVideo"
+            title="Nuestra historia"
+            data-src="https://www.youtube-nocookie.com/embed/ekHAQUsvacE?autoplay=1&amp;rel=0&amp;playsinline=1"
+            allow="autoplay; encrypted-media; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
           <div class="video-loader" aria-hidden="true"><span></span></div>
-          <div class="video-placeholder" id="videoPlaceholder" hidden>
-            <span>♥</span>
-            <h3>El vídeo está casi listo</h3>
-            <p>Coloca <strong>video.mp4</strong> en esta carpeta y aparecerá aquí.</p>
-          </div>
         </div>
       </div>
     </div>

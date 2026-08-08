@@ -1293,14 +1293,14 @@ svg {
   background: #050405;
 }
 
-.video-shell video {
+.video-shell iframe {
   position: relative;
   z-index: 2;
   display: block;
   width: 100%;
   height: 100%;
+  border: 0;
   background: black;
-  object-fit: contain;
 }
 
 .video-loader {
@@ -1322,9 +1322,7 @@ svg {
   animation: spin 0.8s linear infinite;
 }
 
-.video-shell.is-ready .video-loader,
-.video-shell.has-error video,
-.video-shell.has-error .video-loader {
+.video-shell.is-ready .video-loader {
   display: none;
 }
 
